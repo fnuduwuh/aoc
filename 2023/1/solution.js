@@ -2,10 +2,10 @@ import { InputHelper } from '../../getInput.js';
 import fs from 'fs';
 
 const input = new InputHelper();
-const data = input.createArraySeperateByLineBreak(input.getPuzzleInput(2023, 2));
+const data = input.createArraySeperateByLineBreak(input.getPuzzleInput(2023, 1));
 
 data.pop(); // fix this you lazy bugger
-
+console.log(data)
 const numbers = new Map([
     ['one', 1],
     ['two', 2],
@@ -63,4 +63,4 @@ function getSingleDigit(element) {
 }
 
 console.log('Part 1: ' + partOne());
-console.log(' Part 2: ' + partTwo());
+console.log('Part 2: ' + partTwo());
