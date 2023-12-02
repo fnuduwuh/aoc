@@ -2,9 +2,9 @@ import fs from 'fs';
 
 export class InputHelper {
 
-    getPuzzleInput() {
+    getPuzzleInput(year, day) {
         try {
-            var data = fs.readFileSync(`input.txt`, 'utf8');
+            var data = fs.readFileSync(`${year}/${day}/input.txt`, 'utf8');
             return data;
         } catch (e) {
             console.log('Error:', e.stack);

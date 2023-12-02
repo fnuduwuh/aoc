@@ -1,9 +1,8 @@
 import { InputHelper } from '../../getInput.js';
 import fs from 'fs';
 
-var data1 = fs.readFileSync(`2023/1/input.txt`, 'utf8');
 const input = new InputHelper();
-const data = input.createArraySeperateByLineBreak(data1);
+const data = input.createArraySeperateByLineBreak(input.getPuzzleInput(2023, 2));
 
 data.pop(); // fix this you lazy bugger
 
@@ -29,7 +28,6 @@ function partTwo() {
         const firstdigit = getDigit(element, regexWordFw, false);
         const reverseString = element.split('').reverse().join('');
         const lastdigit = getDigit(reverseString, regexWordBw, true);
-        console.log(firstdigit + lastdigit)
         score += parseInt(firstdigit + lastdigit);
     });
     return score;
