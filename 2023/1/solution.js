@@ -5,7 +5,7 @@ const input = new InputHelper();
 const data = input.createArraySeperateByLineBreak(input.getPuzzleInput(2023, 1));
 
 data.pop(); // fix this you lazy bugger
-console.log(data)
+
 const numbers = new Map([
     ['one', 1],
     ['two', 2],
